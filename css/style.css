@@ -6,3 +6,12 @@
     border-radius: 60px;
 
 }
+
+/* style button body smart watch */
+.button-body-smartwatch {
+    width: 27px;
+    height: 33px;
+    right: 20px;
+    top: 50px;
+    border-radius: 10px;
+}
