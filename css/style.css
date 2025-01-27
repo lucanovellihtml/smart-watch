@@ -1,10 +1,8 @@
 /* style body smart watch */
 .body-smartwatch {
-
-    width: 200px;
-    height: 220px;
+    width: 220px;
+    height: 240px;
     border-radius: 60px;
-
 }
 
 /* style button body smart watch */
@@ -14,4 +12,13 @@
     right: 20px;
     top: 50px;
     border-radius: 10px;
+}
+
+/* style lace body smart watch */
+.lace-body-smartwatch {
+    width: 150px;
+    height: 18px;
+    border-radius: 10px;
+    left: 35px;
+    bottom: 12px;
 }
