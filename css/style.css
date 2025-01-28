@@ -24,15 +24,6 @@
 }
 
 /* style string top body smart watch */
-#containerStringTop div:nth-child(2) {
-    width: 130px;
-    height: 60px;
-    top: 9px;
-    left: 46px;
-    background-color: #005F6A;
-    transform: rotateX(45deg);
-}
-
 #containerStringTop div:nth-child(1) {
     width: 120px;
     height: 70px;
@@ -44,34 +35,44 @@
     transform: rotateX(80deg);
 }
 
-/* style string body smart watch */
-#containerStringBottom div:nth-child(2) {
+#containerStringTop div:nth-child(2) {
     width: 130px;
-    height: 50px;
-    left: 45px;
-    bottom: 69px;
+    height: 60px;
+    top: 9px;
+    left: 46px;
     background-color: #005F6A;
     transform: rotateX(45deg);
 }
 
+
+/* style string bottom body smart watch */
 #containerStringBottom div:nth-child(1) {
     width: 130px;
-    height: 50px;
+    height: 60px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     left: 45px;
     bottom: 40px;
-    background-color: #03555e;
-    transform: rotateX(80deg);
+    background-color: #005F6A;
+    transform: rotateX(-80deg);
+}
+
+#containerStringBottom div:nth-child(2) {
+    width: 120px;
+    height: 50px;
+    left: 51px;
+    bottom: 79px;
+    background-color: #005F6A;
+    transform: rotateX(-80deg);
 }
 
 #containerStringBottom div:nth-child(3) {
-    width: 130px;
-    height: 90px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    left: 45px;
-    bottom: 115px;
+    width: 113px;
+    height: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    left: 55px;
+    bottom: 118px;
     background-color: #03555e;
-    transform: rotateX(80deg);
+    transform: rotateX(-85deg);
 }
