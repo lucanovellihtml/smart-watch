@@ -12,6 +12,12 @@
     border-radius: 60px;
 }
 
+/* style clock smart watch */
+.clock-smartwatch {
+    width: 370px;
+    height: 190px;
+}
+
 /* style button body smart watch */
 .button-body-smartwatch {
     width: 15px;
