@@ -5,11 +5,18 @@
     border-radius: 60px;
 }
 
+/* style screen smart watch */
+.screen-smartwatch {
+    width: 190px;
+    height: 210px;
+    border-radius: 60px;
+}
+
 /* style button body smart watch */
 .button-body-smartwatch {
-    width: 27px;
+    width: 15px;
     height: 33px;
-    right: 20px;
+    right: 5px;
     top: 50px;
     border-radius: 10px;
 }
