@@ -1,3 +1,8 @@
+/* span date and time */
+span {
+    font-size: 13px;
+}
+
 /* style body smart watch */
 .body-smartwatch {
     width: 220px;
