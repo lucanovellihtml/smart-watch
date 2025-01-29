@@ -7,16 +7,15 @@ const buttonClock = document.getElementById("buttonClock");
 
 // click button smart watch
 buttonSmartWatch.addEventListener("click", (event) => {
-
     clockSmartWatch.style.display = "none";
+    containerTimeDate.classList.remove("d-none");
     containerTimeDate.style.display = "block";
     swiperSmartWatch.style.display = "block";
-
 })
 
 // click button clock
 buttonClock.addEventListener("click", (event) => {
-    containerTimeDate.style.display = "none";
+    containerTimeDate.classList.add("d-none");
     swiperSmartWatch.style.display = "none";
     clockSmartWatch.style.display = "block";
 });
