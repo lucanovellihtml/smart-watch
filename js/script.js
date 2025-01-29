@@ -24,12 +24,24 @@ buttonClock.addEventListener("click", (event) => {
 // function time and date
 const spanTime = document.getElementById("spanTime");
 const spanDate = document.getElementById("spanDate");
-const monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const time = new Date;
-const mounthName = monthArray[time.getMonth()].substring(0, 3);
-const mounthDay = time.getDay();
-spanDate.innerText = mounthName + " " + mounthDay;
-const hour = time.getHours();
-const minute = time.getMinutes();
-spanTime.innerHTML = hour + ":" + minute;
+
+function getNameMouth() {
+    const time = new Date;
+    const monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const mounthName = monthArray[time.getMonth()].substring(0, 3);
+    const mounthDay = time.getDay();
+    spanDate.textContent = mounthName + " " + mounthDay;
+}
+
+function getHoursMinute() {
+    const time = new Date;
+    const hour = time.getHours();
+    const minute = time.getMinutes();
+    spanTime.textContent = hour + ":" + minute;
+}
+
+setInterval(getHoursMinute, 1000);
+
+getNameMouth();
+getHoursMinute();
 
