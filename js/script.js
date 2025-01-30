@@ -20,6 +20,13 @@ buttonClock.addEventListener("click", (event) => {
     clockSmartWatch.style.display = "block";
 });
 
+// click button weather
+buttonClock.addEventListener("click", (event) => {
+    containerTimeDate.classList.add("d-none");
+    swiperSmartWatch.style.display = "none";
+    clockSmartWatch.style.display = "block";
+});
+
 // function time and date
 const spanTime = document.getElementById("spanTime");
 const spanDate = document.getElementById("spanDate");
@@ -44,3 +51,13 @@ setInterval(getHoursMinute, 1000);
 getNameMouth();
 getHoursMinute();
 
+// function number bpm
+const numberBpm = document.getElementById("numberBpm");
+
+function getNumberBpm() {
+    const number = Math.floor(Math.random() * 180);
+    numberBpm.textContent = number.toString() + " BPM";
+}
+
+setInterval(getNumberBpm, 1000);
+getNumberBpm();
