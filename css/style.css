@@ -31,8 +31,39 @@ span {
     height: 190px;
 }
 
-/* style container time and date */
-#swiperSmartWatch {
+/* style container note */
+#containerNote h1,
+button {
+    font-size: 17px;
+}
+
+/* style form note */
+.form-textarea {
+    width: 190px;
+    height: 158px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+}
+
+#formNote button:nth-child(1) {
+    background-color: white;
+    padding: 2px;
+    border-radius: 20px;
+    border-color: rgb(232 234 236 / 20%);
+}
+
+#formNote button:nth-child(2) {
+    color: rgb(0, 17, 255);
+    padding: 2px;
+    border-radius: 20px;
+    border-color: rgb(232 234 236 / 20%);
+}
+
+
+/* style container choose */
+#swiperSmartWatch,
+#containerNote,
+#formNote {
     display: none;
 }
 
