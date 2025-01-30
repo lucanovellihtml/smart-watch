@@ -12,6 +12,10 @@
     <!-- css style -->
     <link href="css/style.css" rel="stylesheet">
 
+    <!-- css swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="css/style-swiper.css" rel="stylesheet">
+
     <title>Smart watch</title>
 </head>
 
@@ -41,6 +45,47 @@
                 <!-- clock smart watch -->
                 <canvas id="canvas" class="clock-smartwatch ps-1 pt-3">
                 </canvas>
+
+                <!-- weather smart watch -->
+
+                </swiper-slide>
+
+                <!-- container time and date -->
+                <div class="d-flex justify-content-between border-bottom border-dark d-none" id="containerTimeDate">
+
+                    <!-- span date -->
+                    <span class="ps-4 pt-2 fw-bold" id="spanDate"></span>
+
+                    <!-- span time -->
+                    <span class="pe-4 pt-2 fw-bold" id="spanTime"></span>
+
+                </div>
+
+                <!-- swiper smart watch -->
+                <swiper-container id="swiperSmartWatch" class="mySwiper" direction="vertical" mousewheel="true">
+
+                    <!-- swiper clock -->
+                    <swiper-slide id="buttonClock">Clock</swiper-slide>
+
+                    <!-- swiper time -->
+                    <swiper-slide id="buttonTime">Time</swiper-slide>
+
+                    <!-- swiper heart -->
+                    <swiper-slide id="buttonHeart">Heart</swiper-slide>
+
+                    <!-- swiper weather -->
+                    <swiper-slide id="buttonWeather" style="background-color: #757575">
+
+                        <!-- api weather -->
+                        <div id="idac9fd36b14eb0"
+                            a='{"t":"s","v":"1.2","lang":"it","locs":[928],"ssot":"c","sics":"ds","cbkg":"#757575","cfnt":"#FFFFFF","slgp":25,"slbr":15,"slpd":11,"slis":17,"slfs":17}'>
+                            Fonte dei dati meteo: <a href="https://sharpweather.com/weather_milan/30_days/">Milan 30
+                                days weather</a></div>
+                        <script async src="https://static1.sharpweather.com/widgetjs/?id=idac9fd36b14eb0"></script>
+
+                    </swiper-slide>
+
+                </swiper-container>
 
             </div>
 
@@ -92,6 +137,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
+<!-- script swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script src="js/script-swiper-custom.js"></script>
 
 <!-- script custom -->
 <script src="js/script.js"></script>
