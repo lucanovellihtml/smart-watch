@@ -59,6 +59,13 @@ button {
     border-color: rgb(232 234 236 / 20%);
 }
 
+.note-created {
+    border-color: #9e9e9e4a;
+    background-color: #9e9e9e4a;
+    padding: 10px;
+    border-radius: 20px;
+}
+
 
 /* style container choose */
 #swiperSmartWatch,
