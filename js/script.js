@@ -35,6 +35,7 @@ const buttonFormYes = document.getElementById("buttonFormYes");
 const radioNote = document.createElement("input");
 const containerListNote = document.createElement("div");
 const labelNote = document.createElement("label");
+const titleNoteListNotEmpty = document.getElementById("titleNoteListNotEmpty");
 const arrayNotes = [];
 var count = 0;
 
@@ -58,6 +59,8 @@ buttonFormYes.addEventListener("click", (event) => {
     titleNote.style.display = "none";
     formNote.style.display = "none";
     buttonAddNote.style.display = "none";
+    containerNote.style.display = "block";
+    titleNoteListNotEmpty.classList.remove("d-none");
 
     arrayNotes[count] = document.getElementById("textarea").value;
     count++;
@@ -81,6 +84,10 @@ buttonFormYes.addEventListener("click", (event) => {
 
             containerNote.appendChild(containerListNote);
 
+
+
+            containerNote.classList.remove("top-50", "start-50", "translate-middle", "position-absolute");
+            containerNote.classList.add("mt-2");
         }
     }
 });
@@ -96,6 +103,9 @@ radioNote.addEventListener("click", (event) => {
         labelNote.remove();
         radioNote.remove();
         containerListNote.remove();
+        containerNote.classList.add("top-50", "start-50", "translate-middle", "position-absolute");
+        containerNote.classList.remove("mt-2");
+        titleNoteListNotEmpty.classList.add("d-none");
     }
 
 });
