@@ -3,7 +3,6 @@ const clockSmartWatch = document.getElementById("canvas");
 const swiperSmartWatch = document.getElementById("swiperSmartWatch");
 const containerTimeDate = document.getElementById("containerTimeDate");
 
-
 // click button smart watch
 buttonSmartWatch.addEventListener("click", (event) => {
     clockSmartWatch.style.display = "none";
@@ -11,6 +10,7 @@ buttonSmartWatch.addEventListener("click", (event) => {
     containerTimeDate.style.display = "block";
     swiperSmartWatch.style.display = "block";
     containerNote.style.display = "none";
+    formNote.style.display = "none";
 })
 
 // click button clock
@@ -28,10 +28,15 @@ buttonClock.addEventListener("click", (event) => {
 const buttonNote = document.getElementById("buttonNote");
 const containerNote = document.getElementById("containerNote");
 const buttonAddNote = document.getElementById("buttonAddNote");
+const titleNote = document.getElementById("titleNote");
 const formNote = document.getElementById("formNote");
 const buttonFormNo = document.getElementById("buttonFormNo");
 const buttonFormYes = document.getElementById("buttonFormYes");
-const containerNoteNotEmpty = document.getElementById("containerNoteNotEmpty");
+const radioNote = document.createElement("input");
+const containerListNote = document.createElement("div");
+const labelNote = document.createElement("label");
+const arrayNotes = [];
+var count = 0;
 
 buttonNote.addEventListener("click", (event) => {
     containerTimeDate.classList.add("d-none");
@@ -44,42 +49,56 @@ buttonAddNote.addEventListener("click", (event) => {
     formNote.style.display = "block";
 });
 
-buttonFormYes.addEventListener("click", (event) => {
-    const arrayNotes = [];
-    var count = 0;
-    arrayNotes[count] = document.getElementById("textarea").value;
-    count++;
+buttonFormNo.addEventListener("click", (event) => {
     containerNote.style.display = "block";
     formNote.style.display = "none";
+});
 
+buttonFormYes.addEventListener("click", (event) => {
+    titleNote.style.display = "none";
+    formNote.style.display = "none";
+    buttonAddNote.style.display = "none";
+
+    arrayNotes[count] = document.getElementById("textarea").value;
+    count++;
+
+    console.log(count);
+    console.log(arrayNotes);
 
     if (count = 1) {
-        titleNote.style.display = "none";
-        buttonAddNote.style.display = "none";
+
         for (let i = 0; i < arrayNotes.length; i++) {
 
-            const radioNote = document.createElement("input");
             radioNote.classList.add("note-created");
             radioNote.setAttribute("type", "radio");
+            radioNote.setAttribute("id", "elementNote");
 
-            const titleNote = document.createElement("div");
-            titleNote.textContent = arrayNotes[i];
+            labelNote.textContent = arrayNotes[i];
 
-            const containerListNote = document.createElement("div");
-            containerListNote.classList.add("d-flex");
-            containerListNote.classList.add("gap-2");
-            containerListNote.classList.add("mt-4");
-            containerListNote.classList.add("ms-1");
-            containerListNote.classList.add("note-created");
+            containerListNote.classList.add("d-flex", "gap-2", "mt-4", "ms-1", "note-created");
             containerListNote.appendChild(radioNote);
-            containerListNote.appendChild(titleNote);
+            containerListNote.appendChild(labelNote);
 
-            containerNoteNotEmpty.appendChild(containerListNote);
+            containerNote.appendChild(containerListNote);
 
         }
     }
 });
 
+radioNote.addEventListener("click", (event) => {
+
+    if (radioNote.checked = true) {
+        count = 0;
+        arrayNotes.splice(1, 1);
+        titleNote.style.display = "block";
+        buttonAddNote.style.display = "block";
+        radioNote.checked = false;
+        labelNote.remove();
+        radioNote.remove();
+        containerListNote.remove();
+    }
+
+});
 
 
 // function time and date
